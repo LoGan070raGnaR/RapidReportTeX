@@ -1,0 +1,131 @@
+\documentclass[12pt]{report}
+
+% Packages for various functionalities
+\usepackage{graphicx} % Enhanced graphics support
+\usepackage{pifont} % Additional symbols and dingbats
+\usepackage{enumitem} % Customization of lists
+\usepackage{listings} % Typesetting code listings
+\usepackage{color} % Color support for text
+\usepackage{siunitx} % Typesetting of scientific units
+\usepackage{amsmath} % Enhanced mathematical typesetting
+\usepackage{amsmath,amssymb} % Additional mathematical symbols
+\usepackage{underscore} % Allowing underscores in text mode
+\usepackage{xcolor} % Extended color support
+\definecolor{mycolor}{HTML}{00aba9} % Custom color definition
+
+
+\lstset{
+	language=Python, % Set the language for syntax highlighting (e.g., Python, Java, C++)
+	basicstyle=\ttfamily, % Use typewriter font for code
+	keywordstyle=\bfseries\color{blue}, % Style for keywords (bold and blue)
+	commentstyle=\itshape\color{gray}, % Style for comments (italic and gray)
+	stringstyle=\ttfamily\color{mycolor}, % Style for strings (typewriter font and custom color)
+	showstringspaces=false, % Don't display spaces within strings
+	breaklines=true, % Enable line wrapping for long lines
+	frame=single, % Add a frame around the code
+	numbers=left, % Display line numbers on the left side
+	numberstyle=\tiny\color{gray}, % Style for line numbers (tiny and gray)
+	numbersep=5pt, % Distance between line numbers and code
+	tabsize=4, % Set the tab size to 4 spaces
+	stepnumber=1, % Display line numbers incrementally by 1
+	backgroundcolor=\color{white}, % Set the background color of the code
+	postbreak=\mbox{\textcolor{red}{$\hookrightarrow$}\space}, % Symbol for line break continuation
+	showspaces=false, % Don't display spaces as special characters
+	showstringspaces=false % Don't display spaces within strings as special characters
+}
+
+
+\usepackage[total={6.5in,8.75in},
+top=1.2in, left=0.9in, includefoot]{geometry} % Adjust the page layout and margins
+
+\setlength{\parindent}{0.5in} % Set the indentation for new paragraphs
+
+\usepackage[utf8]{inputenc} % Specify the input encoding for special characters
+\usepackage[edges]{forest} % Create and customize trees and forests
+
+\usepackage{forest} % Load the forest package for tree structures
+\usepackage{amsmath} % Enhancements to mathematical typesetting
+\usepackage{parskip} % Set the spacing between paragraphs
+
+\setlength{\parindent}{0.5in} % Set the indentation for new paragraphs
+
+\usepackage{times} % Use the Times font
+\usepackage{graphicx} % Include graphics in the document
+\usepackage{tikz} % Create beautiful graphics and diagrams
+
+\usepackage{lipsum} % Generate dummy text (lorem ipsum)
+%\usepackage[a4paper,margin=1in]{geometry} % Alternative method to set the page layout and margins
+
+\usepackage{tikz} % Load the tikz package for creating graphics and diagrams
+\usetikzlibrary{calc} % Additional TikZ library for coordinate calculations
+%\usetikzlibrary{patterns} % Additional TikZ library for patterns
+\usepackage{scrlayer-scrpage} % Flexible page style and header/footer customization
+
+
+\usepackage{titlesec} % Customize the formatting of titles (chapters, sections, etc.)
+
+\titleformat{\chapter}[display]
+{\normalfont\huge\bfseries\centering\fontsize{16}{16}\selectfont}{\chaptertitlename\ \thechapter}{20pt}{\Huge} % Format chapter titles
+\titleformat{\section}
+{\normalfont\Large\bfseries\fontsize{14}{14}\selectfont}{\thesection}{1em}{} % Format section titles
+\titleformat{\subsection}
+{\normalfont\large\bfseries\fontsize{14}{14}\selectfont}{\thesubsection}{1em}{} % Format subsection titles
+
+\clearpairofpagestyles % Clear the default page style
+\cfoot{\pagemark} % Set the center footer to display page numbers
+
+\pagestyle{scrheadings} % Set the page style to scrheadings for headers and footers
+\clearpairofpagestyles % Clear the default page style again
+
+\ofoot{\vspace{-2.0cm}\pagemark} % Adjust the position of the page number in the footer
+
+\ifoot{\vspace{-2.0cm}content} % Sets the content of the inner (left) footer on the page.
+
+\ihead{content} % Sets the content of the inner (left) header on the page.
+\ohead{content} % Sets the content of the outer (right) header on the page.
+
+\usepackage{tikz} % Load the tikz package for creating graphics and diagrams
+\usepackage{scrlayer-scrpage} % Flexible page style and header/footer customization
+
+% Optional: If you want your page to look gray
+% \definecolor{mycolor}{RGB}{200, 200, 200}
+% \color{mycolor}
+
+
+\begin{document}
+	% optional if you want your letter to look different
+	% \pagecolor[HTML]{333333}
+	
+	% Define a command to draw the page border using TikZ
+	\newcommand{\myborder}{%
+		\begin{tikzpicture}[remember picture,overlay]
+			% Draw a rectangle for the outer border
+			\draw[line width=1pt]
+			($(current page.north west) + (0.45in,-0.45in)$) rectangle
+			($(current page.south east) + (-0.5in,0.45in)$);
+			
+			% Draw lines for the inner border
+			\draw[line width=2pt]
+			($(current page.north west) + (0.85in,-0.85in)$) -- ($(current page.north east) + (-0.9in,-0.85in)$)
+			($(current page.south west) + (0.85in,0.85in)$) -- ($(current page.south east) + (-0.9in,0.85in)$);
+		\end{tikzpicture}%
+	}
+	
+	% Add the thick page border to the center header
+	\chead[\myborder]{\myborder}
+	
+	% Set document properties
+	\raggedright % Align text to the left
+	\setlength{\parskip}{1em} % Set paragraph spacing
+	
+	% Generate table of contents
+	\tableofcontents
+	
+	% Start of document content
+	\chapter{Chapter Name}
+	\section{Section Name}
+	\subsection{Subsection Name}
+	\subsubsection{Subsubsection Name}
+	
+	% End of document
+\end{document}
