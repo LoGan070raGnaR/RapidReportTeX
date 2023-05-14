@@ -16,14 +16,25 @@ The project consists of the following files:
 To start using RapidReportTeX, follow these steps:
 
 1. Clone this repository to your local machine.
-2. Install LaTeX if you haven't already.
+2. Install LaTeX if you haven't already. You can download and install LaTeX from the official website: [https://www.latex-project.org/get/](https://www.latex-project.org/get/)
 3. Open the `RapidReportTeX.tex` file in your preferred LaTeX editor.
 4. Customize the template to suit your report's requirements.
 5. Compile the LaTeX document to generate the final report.
 
 ## Dependencies
 
-RapidReportTeX requires a working LaTeX installation. You can download and install LaTeX from the official website: https://www.latex-project.org/get/
+RapidReportTeX requires the following dependencies:
+
+- LaTeX: The typesetting system used for document preparation. You can download and install LaTeX from the official website: [https://www.latex-project.org/get/](https://www.latex-project.org/get/)
+- LaTeX Editors: You can use any LaTeX editor of your choice. Some popular options include:
+  - TeXstudio: An open-source LaTeX editor available for different platforms. You can download it from the official website: [https://www.texstudio.org/](https://www.texstudio.org/)
+  - Overleaf: An online LaTeX editor and collaboration platform. You can access it at: [https://www.overleaf.com/](https://www.overleaf.com/)
+  - ShareLaTeX: An online LaTeX editor and collaboration platform (now part of Overleaf). You can access it at: [https://www.sharelatex.com/](https://www.sharelatex.com/)
+  - LaTeXila: A LaTeX editor for the GNOME desktop environment. You can find more information at: [https://wiki.gnome.org/Apps/LaTeXila](https://wiki.gnome.org/Apps/LaTeXila)
+  - LyX: A document processor that uses LaTeX under the hood but provides a more user-friendly interface. You can learn more at: [https://www.lyx.org/](https://www.lyx.org/)
+  - Sublime Text with LaTeXTools: A popular text editor with a LaTeX plugin. You can find more information at: [https://latextools.readthedocs.io/en/latest/](https://latextools.readthedocs.io/en/latest/)
+
+Please note that this list includes some popular LaTeX editors, but there are many more options available. Feel free to choose the LaTeX editor that best suits your needs.
 
 ## Contributing
 
